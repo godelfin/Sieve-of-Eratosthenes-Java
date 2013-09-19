@@ -21,7 +21,7 @@ public class Eratosthenes implements Sieve {
 
         Integer p = 2;
         while (p < max) {
-            for (Integer i = p; i < max; i += p) {
+            for (Integer i = p * 2; i <= max; i += p) {
                 allIntegers.remove(i);
             }
             p++;
